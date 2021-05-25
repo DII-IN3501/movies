@@ -8,6 +8,9 @@ class Pelicula(models.Model):
     genero = models.CharField(max_length=255)
     idioma = models.CharField(max_length=7)
 
+    def __str__(self):
+        return self.titulo
+
 class Subtitulo(models.Model):
     idioma = models.CharField(max_length=7)
     contenido = models.FileField(upload_to="uploads/")
