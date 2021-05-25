@@ -16,7 +16,7 @@ class Subtitulo(models.Model):
 class Persona(models.Model):
     nombre = models.CharField(max_length=255)
     nacionalidad = models.CharField(max_length=255)
-    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
 
 class Participacion(models.Model):
     pelicula = models.ForeignKey(Pelicula, on_delete=models.CASCADE)
