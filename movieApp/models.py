@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Pelicula(models.Model):
     titulo = models.CharField(max_length=255)
-    estreno = models.DateField()
+    estreno = models.DateField(null=True)
     genero = models.CharField(max_length=255)
     idioma = models.CharField(max_length=7)
 
